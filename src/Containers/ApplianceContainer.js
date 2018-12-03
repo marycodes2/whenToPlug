@@ -15,11 +15,11 @@ export default class ApplianceContainer extends React.Component {
 
   render(){
     return(
-      <div>
-        <div>Appliance Container</div>
+      <div className="grid-container">
+        <div className="grid-x grid-padding-x small-up-2 medium-up-3">
         {this.state.appliances.map(app =>
           <Appliance appliance={app}/>)}
-
+        </div>
       </div>
     )
 
