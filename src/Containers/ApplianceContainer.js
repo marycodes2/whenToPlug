@@ -15,8 +15,9 @@ export default class ApplianceContainer extends React.Component {
 
   render(){
     return(
-      <div className="grid-container">
-        <div className="grid-x grid-padding-x small-up-2 medium-up-3">
+      <div>
+        <h1>Please select from the below appliances:</h1>
+        <div className="ui four cards">
         {this.state.appliances.map(app =>
           <Appliance appliance={app}/>)}
         </div>
