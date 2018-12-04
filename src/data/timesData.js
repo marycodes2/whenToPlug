@@ -1,4 +1,4 @@
-["12am - 1am",
+const times = ["12am - 1am",
 "1am - 2am",
 "2am - 3am",
 "3am - 4am",
@@ -10,7 +10,7 @@
 "9am - 10am",
 "10am - 11am",
 "11am - 12pm",
-"12ap - 1pm",
+"12pm - 1pm",
 "1pm - 2pm",
 "2pm - 3pm",
 "3pm - 4pm",
@@ -23,3 +23,5 @@
 "10pm - 11pm",
 "11pm - 12am",
 ]
+
+export default times

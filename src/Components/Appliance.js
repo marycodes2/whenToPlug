@@ -3,6 +3,10 @@ import HoursModal from './HoursMod'
 
 
 class Appliance extends React.Component {
+  state = {
+    hours: []
+  }
+
   render(){
   return(
     <div className='ui raised card'>
@@ -15,9 +19,7 @@ class Appliance extends React.Component {
       <div className="description">
         {this.props.appliance.load} watts/hour
       </div>
-      <div className="ui bottom attached button">
-      <i className="add icon"></i>
-      Add Appliance</div>
+      <HoursModal name={this.props.appliance.name}/>
   </div>
   )}
 }
