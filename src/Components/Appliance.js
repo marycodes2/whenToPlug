@@ -19,7 +19,7 @@ class Appliance extends React.Component {
       <div className="description">
         {this.props.appliance.load} watts/hour
       </div>
-      <HoursModal name={this.props.appliance.name}/>
+      <HoursModal appliance={this.props.appliance}/>
   </div>
   )}
 }

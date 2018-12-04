@@ -9,14 +9,17 @@ export default class ApplianceContainer extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({appliances: ApplianceData})
+    fetch('http://localhost:3000/appliances')
+    .then(res => res.json())
+    .then(data => this.setState({appliances: data}))
+
   }
 
 
   render(){
     return(
       <div>
-        <h1>Please select from the below appliances:</h1>
+        <h1>Select the appliances you use each week</h1>
         <div className="ui six doubling cards">
         {this.state.appliances.map(app =>
           <Appliance appliance={app}/>)}
