@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Results = () =>{
+const Results = (props) =>{
   return(
     <div>
-    result
+    {props.appliance[0]}
+    {<ul>props.appliance[1].forEach(time=>
+    <li>time</li>)</ul>}
     </div>
   )
 }
