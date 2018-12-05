@@ -14,7 +14,7 @@ class ResultsContainer extends Component {
 
     fetch(`http://localhost:3000/users/${1}`)
     .then(res => res.json())
-    .then(res => res[0].visitor_requests.forEach(vr => this.setState({
+    .then(data => data[0].visitor_requests.forEach(vr => this.setState({
       appliances: [
         ...this.state.appliances,
         [vr.appliance.name, vr.efficiency_hours]
@@ -25,10 +25,12 @@ class ResultsContainer extends Component {
   }
   render() {
     return (
-      <div>
-        <h2>We recommend that you use your appliances during the following times:</h2>
+      <div
+        style={{color: 'grey'}}>
+        <h1
+          className='cw'>We recommend that you use your appliances during the following times:</h1>
         {this.state.appliances.map(appliance =>
-        <Results appliance={appliance} />)}
+        <Results key={appliance.id} appliance={appliance} />)}
       </div>
     )
   }

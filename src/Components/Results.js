@@ -1,12 +1,16 @@
 import React from 'react'
+import Time from './Time'
 
-const Results = (props) =>{
+
+const Results = props =>{
+
   return(
-    <div>
-    {props.appliance[0]}
-    {<ul>props.appliance[1].forEach(time=>
-    <li>time</li>)</ul>}
-    </div>
+    <ul
+      className='cw ui card'>
+    <h2><b>{props.appliance[0]}<br></br></b></h2>
+    {props.appliance[1].map(t =>
+    <Time time={t} />)}
+    </ul>
   )
 }
 

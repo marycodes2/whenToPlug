@@ -14,7 +14,7 @@ class Appliance extends React.Component {
         {this.props.appliance.name}
       </b></div>
       <div className="image">
-        <img src={this.props.appliance.image}></img>
+        <img src={this.props.appliance.image} alt={this.props.appliance.name}></img>
       </div>
       <div className="description">
         {this.props.appliance.load} watts/hour
